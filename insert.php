@@ -3,7 +3,7 @@
 
 
 <?php
-include 'config/db.inc';
+include 'config/db.inc.php';
 
 $con = mysql_connect("$DB_HOST","$DB_USER","$DB_PASS");
 if (!$con)
@@ -13,7 +13,7 @@ if (!$con)
 
 mysql_select_db("$DB_NAME", $con);
 
-$sql="INSERT INTO nametable (demostr)
+$sql="INSERT INTO demo (demostr)
 VALUES
 ('$_POST[demostr]')";
 
